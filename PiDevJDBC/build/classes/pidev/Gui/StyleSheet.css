@@ -1,0 +1,5 @@
+
+.buttonA {
+    -fx-background-color: rgb(136, 69, 69); /* Utilisez le code hexadécimal de la couleur marron que vous souhaitez */
+    -fx-text-fill: white; /* Facultatif : définit la couleur du texte en blanc pour un contraste accru */
+}
