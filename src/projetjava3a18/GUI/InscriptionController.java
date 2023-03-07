@@ -134,5 +134,19 @@ FXMLLoader loader = new FXMLLoader(getClass().getResource("modifier.fxml"));
     }
  
     }
+ @FXML
+    void annuler(ActionEvent event) {
+
+     tfid_produit.clear();
+    
+   tfnom_produit.clear();
+  
+    tfprix_produit.clear();
+   
+    tfquantite.clear();
+
+    tfdescrption.clear();
+    }
+
 }
 

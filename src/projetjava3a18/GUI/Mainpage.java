@@ -29,7 +29,7 @@ public class Mainpage extends Application {
         
        
             try {
-                Parent root =FXMLLoader.load(getClass().getResource("/API/StatistiqueDali.fxml")); 
+                Parent root =FXMLLoader.load(getClass().getResource("afficherProduit.fxml")); 
                 
                    
                           Scene scene = new Scene(root);

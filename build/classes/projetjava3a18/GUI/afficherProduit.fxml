@@ -20,5 +20,7 @@
       <TextField fx:id="idc1" layoutX="442.0" layoutY="526.0" prefHeight="31.0" prefWidth="245.0" />
       <Button fx:id="supp" layoutX="253.0" layoutY="521.0" mnemonicParsing="false" onAction="#supprimer" text="supprimer" />
       <Button fx:id="calcul" layoutX="390.0" layoutY="619.0" mnemonicParsing="false" onAction="#calculateTotalPrice" prefHeight="42.0" prefWidth="208.0" text="calcul prix" />
+      <Button fx:id="m1" layoutX="687.0" layoutY="619.0" mnemonicParsing="false" onAction="#modifier" text="modifier" />
+      <Button fx:id="a1" layoutX="202.0" layoutY="619.0" mnemonicParsing="false" onAction="#ajouter" text="ajouter" />
    </children>
 </AnchorPane>

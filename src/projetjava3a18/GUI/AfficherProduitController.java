@@ -52,6 +52,10 @@ public class AfficherProduitController implements Initializable {
    private Button supp;
     @FXML
     private Button calcul;
+     @FXML
+   private Button a1;
+      @FXML
+   private Button m1;
     
 
 
@@ -125,4 +129,31 @@ private void calculateTotalPrice(ActionEvent event) {
                 // l'utilisateur a cliqué sur "Non", ne rien faire
             }
         });}
+  @FXML
+private void modifier(ActionEvent event)  {
+    try{
+FXMLLoader loader = new FXMLLoader(getClass().getResource("modifier.fxml"));
+   Parent root = loader.load();
+        Stage stage = new Stage();
+        stage.setScene(new Scene(root));
+        stage.show();
+} catch (IOException e) {
+        Logger.getLogger(AfficherProduitController.class.getName()).log(Level.SEVERE, null, e);
+    }
+ 
+    }
+@FXML
+private void ajouter(ActionEvent event)  {
+    try{
+FXMLLoader loader = new FXMLLoader(getClass().getResource("Inscription.fxml"));
+   Parent root = loader.load();
+        Stage stage = new Stage();
+        stage.setScene(new Scene(root));
+        stage.show();
+} catch (IOException e) {
+        Logger.getLogger(AfficherProduitController.class.getName()).log(Level.SEVERE, null, e);
+    }
+ 
+    }
+    
 }
