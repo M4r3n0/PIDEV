@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+		<meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+		<title>Restaurants</title>
+		<meta content="" name="description">
+		<meta
+		content="" name="keywords">
+
+		<!-- Favicons -->
+		<link href="/assets/img/favicon.png" rel="icon">
+		<link
+		href="/assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+		<!-- Google Fonts -->
+		<link
+		href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Raleway:300,400,500,700,800" rel="stylesheet">
+
+		<!-- Vendor CSS Files -->
+		<link href="/assets/vendor/aos/aos.css" rel="stylesheet">
+		<link href="/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+		<link href="/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+		<link href="/assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+		<link
+		href="/assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+		<!-- Template Main CSS File -->
+		<link
+		href="/assets/css/style.css" rel="stylesheet">
+
+	<!-- =======================================================
+																											  * Template Name: TheEvent
+																											  * Updated: Mar 10 2023 with Bootstrap v5.2.3
+																											  * Template URL: https://bootstrapmade.com/theevent-conference-event-bootstrap-template/
+																											  * Author: BootstrapMade.com
+																											  * License: https://bootstrapmade.com/license/
+																											  ======================================================== -->
+	</head>
+
+	<body>
+
+		<header id="header" class="d-flex align-items-center header-inner">
+			<div class="container-fluid container-xxl d-flex align-items-center justify-content-between">
+
+				<div id="logo">
+					<a>
+						<img src="assets/img/logo1.png" alt="" title="">
+					</a>
+				</div>
+
+				<nav id="navbar" class="navbar order-last order-lg-0">
+					<ul>
+						<li>
+							<a class="nav-link scrollto" href="#bottom">Plus d'infos</a>
+						</li>
+						<li>
+							<a class="nav-link scrollto" href="#bottom">Contact</a>
+						</li>
+					</ul>
+					<i class="bi bi-list mobile-nav-toggle"></i>
+				</nav>
+
+				<a href="{{ path('app_restaurant_index') }}">Nos Restaurants</a>
+
+			</div>
+		</header>
+		<!-- End Header -->
+
+		<main
+			id="main" class="main-page">
+
+			<!-- ======= Speaker Details Sectionn ======= -->
+			<section id="speakers-details">
+				<div class="container">
+					<div class="section-header">
+						<h2>Restaurants</h2>
+
+					</div>
+
+					<div class="row">
+						<div class="col-md-6">
+							<img src="/assets/img/speakers/couscous-viande_0.jpg" alt="Speaker 1" class="img-fluid">
+						</div>
+
+						<div class="col-md-6">
+							<div class="details">
+
+
+								{% block body %}
+									<center>
+										<h1>Restaurant
+											{{ restaurant.nom }}</h1>
+
+										<table class="table">
+											<tbody>
+												<tr>
+													<th>Id</th>
+													<td>{{ restaurant.id }}</td>
+												</tr>
+												<tr>
+													<th>Nom</th>
+													<td>{{ restaurant.nom }}</td>
+												</tr>
+												<tr>
+													<th>Adresse</th>
+													<td>{{ restaurant.adresse }}</td>
+												</tr>
+												<tr>
+													<th>Menu</th>
+													<td>{{ restaurant.menu }}</td>
+												</tr>
+												<tr>
+													<th>Programme</th>
+													<td>{{ restaurant.prog }}</td>
+												</tr>
+												<tr>
+													<th>Telephone</th>
+													<td>{{ restaurant.telephone }}</td>
+												</tr>
+												<tr>
+													<th>Nombre de places
+													</th>
+													<td>{{ restaurant.nbrep }}</td>
+												</tr>
+												<tr>
+													<th>Note</th>
+													<td>{{ restaurant.note }}</td>
+												</tr>
+											</tbody>
+										</table>
+										<button>
+											<a href="{{ path('app_restaurant_index') }}">back to list</a>
+										</button>
+										<button>
+											<a href="{{ path('app_restaurant_edit', {'id': restaurant.id}) }}">edit</a>
+										</button>
+										{{ include('restaurant/_delete_form.html.twig') }}
+									</center>
+								{% endblock %}
+
+							</div>
+						</div>
+
+					</div>
+				</div>
+
+			</section>
+			<section id="supporters" class="section-with-bg">
+
+				<div class="container" data-aos="fade-up">
+					<div class="section-header">
+						<h2>Sponsors</h2>
+					</div>
+
+					<div class="row no-gutters supporters-wrap clearfix" data-aos="zoom-in" data-aos-delay="100">
+
+						<div class="col-lg-3 col-md-4 col-xs-6">
+							<div class="supporter-logo">
+								<img src="assets/img/supporters/1.png" class="img-fluid" alt="">
+							</div>
+						</div>
+
+						<div class="col-lg-3 col-md-4 col-xs-6">
+							<div class="supporter-logo">
+								<img src="assets/img/supporters/2.png" class="img-fluid" alt="">
+							</div>
+						</div>
+
+						<div class="col-lg-3 col-md-4 col-xs-6">
+							<div class="supporter-logo">
+								<img src="assets/img/supporters/3.png" class="img-fluid" alt="">
+							</div>
+						</div>
+
+						<div class="col-lg-3 col-md-4 col-xs-6">
+							<div class="supporter-logo">
+								<img src="assets/img/supporters/4.png" class="img-fluid" alt="">
+							</div>
+						</div>
+
+						<div class="col-lg-3 col-md-4 col-xs-6">
+							<div class="supporter-logo">
+								<img src="assets/img/supporters/5.png" class="img-fluid" alt="">
+							</div>
+						</div>
+
+						<div class="col-lg-3 col-md-4 col-xs-6">
+							<div class="supporter-logo">
+								<img src="assets/img/supporters/6.png" class="img-fluid" alt="">
+							</div>
+						</div>
+
+						<div class="col-lg-3 col-md-4 col-xs-6">
+							<div class="supporter-logo">
+								<img src="assets/img/supporters/7.png" class="img-fluid" alt="">
+							</div>
+						</div>
+
+						<div class="col-lg-3 col-md-4 col-xs-6">
+							<div class="supporter-logo">
+								<img src="assets/img/supporters/8.png" class="img-fluid" alt="">
+							</div>
+						</div>
+
+					</div>
+
+				</div>
+
+			</main><!-- End #main --><!-- ======= Footer ======= --><footer id="footer">
+				<div class="footer-top">
+					<div class="container">
+						<div class="row">
+							<center>
+								<div class="col-lg-3 col-md-6 footer-info" id="bottom">
+									<img src="/assets/img/logo1.png" height="200" width="150">
+									<p>TN Maze's Key est une application developpée par des apprenti-developpeurs sur multiples platformes qui facilite aux touristes la visite de la Tunisie</p>
+								</div>
+							</center>
+
+						</div>
+					</div>
+				</div>
+
+
+				<div class="col-lg-3 col-md-6 footer-contact">
+					<h4>Contact Us</h4>
+					<p>
+						Esprit<br>
+						Ariana Essoghra<br>
+						Tunisie<br>
+						<strong>Phone:</strong>
+						+216 50 080 401<br>
+						<strong>Email:</strong>
+						leaders@esprit.tn
+						<br>
+					</p>
+
+					<div class="social-links">
+						<a href="#" class="twitter">
+							<i class="bi bi-twitter"></i>
+						</a>
+						<a href="#" class="facebook">
+							<i class="bi bi-facebook"></i>
+						</a>
+						<a href="#" class="instagram">
+							<i class="bi bi-instagram"></i>
+						</a>
+						<a href="#" class="google-plus">
+							<i class="bi bi-instagram"></i>
+						</a>
+						<a href="#" class="linkedin">
+							<i class="bi bi-linkedin"></i>
+						</a>
+					</div>
+				</div>
+			</footer><!-- End  Footer --><a href="#" class="back-to-top d-flex align-items-center justify-content-center">
+				<i class="bi bi-arrow-up-short"></i>
+			</a><!-- Vendor JS Files --><script src="/assets/vendor/aos/aos.js"></script>
+			<script src="/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+			<script src="/assets/vendor/glightbox/js/glightbox.min.js"></script>
+			<script src="/assets/vendor/swiper/swiper-bundle.min.js"></script>
+			<script src="/assets/vendor/php-email-form/validate.js"></script><!-- Template Main JS File --><script src="/assets/js/main.js"></script>
+		</body>
+	</body>
+</html>

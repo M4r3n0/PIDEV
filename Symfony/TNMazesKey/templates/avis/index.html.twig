@@ -1,0 +1,36 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Avis index
+{% endblock %}
+
+
+{% block body %}
+	<h1>Avis index</h1>
+
+	<table class="table">
+		<thead>
+			<tr>
+				<th>Numavis</th>
+				<th>UserId</th>
+				<th>Note</th>
+
+			</tr>
+		</thead>
+		<tbody>
+			{% for avi in avis %}
+				<tr>
+					<td>{{ avi.numavis }}</td>
+					<td>{{ avi.userId }}</td>
+					<td>{{ avi.note }}</td>
+
+				</tr>
+			{% else %}
+				<tr>
+					<td colspan="4">no records found</td>
+				</tr>
+			{% endfor %}
+		</tbody>
+	</table>
+
+
+{% endblock %}
